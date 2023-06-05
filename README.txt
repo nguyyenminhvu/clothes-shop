@@ -1,4 +1,4 @@
-USER MANAGEMENT
+Clothes Shop
 
 If there is a problem with the library, you need to import all the libraries that I have left here for the project to work, including: All file in FOLDER LoginGoogle-lib and FOLDER Paypal-lib, FILE sqljdbc4.
 
