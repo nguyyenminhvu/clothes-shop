@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import sample.model.google.AccountGoogleDTO;
 import sample.model.user.Employee;
 import sample.model.user.User;
 
@@ -35,6 +36,9 @@ public class UserDAO {
     private static final String UPDATE_USER_PASSWORD = "UPDATE Authorizations SET password=? WHERE username=?";
     private static final String GET_EMPLOYEE_BY_USERNAME = "SELECT a.username, password, role, name, status FROM Authorizations AS a INNER  JOIN Employee AS e ON a.username=e.username WHERE a.username= ? ";
     private static final String UPDATE_EMPLOYEE_INFORMATION = "UPDATE Authorizations SET password=? WHERE username=?";
+    private static final String INSERT_ACCOUNT_GOOGLE = "INSERT INTO Users(username,name) VALUES(?,?)";
+    private static final String CHECK_EXIST_EMAIL = "SELECT e.id, e.username, e.email FROM EmailMark as e WHERE e.email=?";
+    private static final String INSERT_EMAILMARK = "INSERT INTO EmailMark(username, email) VALUES(?,?)";
 
     public UserDAO() {
     }
@@ -83,6 +87,32 @@ public class UserDAO {
             }
         } catch (SQLException e) {
             System.out.println("Error at CheckUserExist with ERROR: " + e.toString());
+        }
+        return false;
+    }
+
+    public Boolean CheckUserExistEmailMark(String email) throws ClassNotFoundException {
+        try {
+            PreparedStatement st = DBUtils.getConnection().prepareStatement(CHECK_EXIST_EMAIL);
+            st.setString(1, email);
+            ResultSet rs = st.executeQuery();
+            if (rs.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error at CheckUserExist with ERROR: " + e.toString());
+        }
+        return false;
+    }
+
+    public Boolean InsertEmailMark(String username, String email) throws ClassNotFoundException {
+        try {
+            PreparedStatement st = DBUtils.getConnection().prepareStatement(INSERT_EMAILMARK);
+            st.setString(1, username);
+            st.setString(2, email);
+            return st.executeUpdate() > 0;
+        } catch (SQLException e) {
+            System.out.println("Error at CheckUserExistEmailMark with ERROR: " + e.toString());
         }
         return false;
     }
@@ -290,6 +320,7 @@ public class UserDAO {
         UserDAO u = new UserDAO();
 //        User user = new User("anhiuem", "anhiuem", "USER", "Nguyen Van Dijk");
 //        System.out.println(u.UpdateEmployeeInformation("admin", "1","Zan Dai"));
-        System.out.println(u.CheckLoginUser("nguyen", "1"));
+          String code = "0123456789";
+          System.out.println(u.InsertEmailMark("vuchatnguyen", "vuchatnguyen@gmail.com"));
     }
 }

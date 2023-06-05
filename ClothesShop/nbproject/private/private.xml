@@ -3,10 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ACER/Desktop/ClothesShop/src/java/sample/config/google/LoginGoogleHandle.java</file>
-            <file>file:/C:/Users/ACER/Desktop/ClothesShop/web/Login.html</file>
-            <file>file:/C:/Users/ACER/Desktop/ClothesShop/web/Login.jsp</file>
-            <file>file:/C:/Users/ACER/Desktop/ClothesShop/src/java/sample/config/google/Constants.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/web/index.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/LogoutController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/dao/UserDAO.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/LoadInformationUserController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/LoginController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/web/UserUpdatePassword.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/LoadShopController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/AuthenLoginGoogleController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/UpdateInformationUserController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/AllProductController.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/controller/LoadIndexPage.java</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/web/UserUpdateInformation.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/TestGit/clothes-shop/ClothesShop/src/java/sample/config/google/LoginGoogleHandle.java</file>
         </group>
     </open-files>
 </project-private>

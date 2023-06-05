@@ -52,7 +52,6 @@ public class ProductDAO {
     private static final String GET_ORDER_DETAIL_BY_ORDERID = "SELECT * FROM OrderDetail WHERE orderId=?";
     private static final String GET_CATEGORY_BY_NAME = "SELECT * FROM Category WHERE name LIKE ?";
     private static final String UPDATE_PRODUCT = "UPDATE Product SET name=?, idCategory=?,quantity=?,price=?,description=?,img=?,isActive=?,lastupdate=GETDATE() WHERE id=?";
-    
 
     public List<Product> SearchProductByName(String name) throws ClassNotFoundException {
         List<Product> listProduct = new ArrayList<>();
@@ -151,7 +150,7 @@ public class ProductDAO {
             PreparedStatement st = DBUtils.getConnection().prepareStatement(GET_ALL_PRODUCT);
             ResultSet rs = st.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt("id"), rs.getString("name"), rs.getDouble("price"), rs.getInt("quantity"), rs.getString("description"), rs.getString("img"), GetCategoryById(rs.getInt("idCategory")),rs.getInt("sold"), rs.getBoolean("isactive"));
+                Product p = new Product(rs.getInt("id"), rs.getString("name"), rs.getDouble("price"), rs.getInt("quantity"), rs.getString("description"), rs.getString("img"), GetCategoryById(rs.getInt("idCategory")), rs.getInt("sold"), rs.getBoolean("isactive"));
                 listProduct.add(p);
             }
         } catch (SQLException e) {
@@ -574,7 +573,11 @@ public class ProductDAO {
 //        System.out.println(pDAO.InsertOrder(cart, u));
 //        Category c = pDAO.GetCategoryById(1);
 //        Product pp = new Product(33, "tao ne", 450.00, 10, "cai loz ma", "lozzzz", c, 12, false);
-        System.out.println(pDAO.GetAllProduct());
+        //  System.out.println(pDAO.GetAllProduct());
+        String email = "nguyenminhvasfas@gmail.com";
+        String username = email.substring(0, email.lastIndexOf("@"));
+        
+        System.out.println(username);
     }
 
 }

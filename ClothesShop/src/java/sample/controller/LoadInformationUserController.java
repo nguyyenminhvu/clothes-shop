@@ -13,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import sample.model.product.Cart;
 import sample.model.user.User;
 
 /**
@@ -42,13 +44,25 @@ public class LoadInformationUserController extends HttpServlet {
         UserDAO uDAO = new UserDAO();
         try {
             String username = request.getParameter("username");
+            HttpSession session = request.getSession();
+            Cart cart = (Cart) session.getAttribute("Cart");
+            int sizeCart = 0;
+            if (cart != null) {
+                sizeCart = cart.getMapCart().size();
+            }
             if (username != null) {
                 User u = uDAO.GetUserByUsername(username);
                 if (u != null) {
                     request.setAttribute("u", u);
                     request.setAttribute("msg", request.getAttribute("msg"));
                     request.setAttribute("uriBack", "LoadPage");
-                    if (request.getParameter("key").equals("UpdatePassword")) {
+                    if (sizeCart == 0) {
+                        request.setAttribute("sizeCart", "0");
+                    } else {
+                        request.setAttribute("sizeCart", sizeCart);
+                    }
+                    String key = request.getParameter("key");
+                    if (key != null && key.equals("UpdatePassword")) {
                         url = "UserUpdatePassword.jsp";
                     } else {
                         url = SUCCESS;
@@ -60,8 +74,8 @@ public class LoadInformationUserController extends HttpServlet {
                 url = HOME;
             }
         } catch (Exception e) {
-            System.out.println("Error at UpdateInformationUserController with ERROR: " + e.toString());
-            request.setAttribute("ERROR", "Error at UpdateInformationUserController");
+            System.out.println("Error at LoadInformationUserController with ERROR: " + e.toString());
+            request.setAttribute("ERROR", "Error at LoadInformationUserController");
         } finally {
             request.getRequestDispatcher(url).forward(request, response);
         }

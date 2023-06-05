@@ -17,7 +17,7 @@
 
     <body style="background-image: url(./img/pexels-andreea-ch-1166644.jpg);">
         <c:if test="${requestScope.action eq null}">
-            <c:redirect url="login.html"></c:redirect>
+            <c:redirect url="Login.html"></c:redirect>
         </c:if>
         
         <section>
@@ -59,8 +59,8 @@
                                     </div>
                                     <div class="buttonSubmit">
                                         <input name="nameGoogle" value="${requestScope.nameGoogle}" hidden/>
-                                        <input name="userEmail" value="${requestScope.userEmail}" hidden/>
-                                        <input name="roleId" value="US" hidden/>
+                                        <input name="username" value="${requestScope.username}" hidden/>
+                                        <input name="roleId" value="USER" hidden/>
                                         <input name="action" value="AuthenGoogle" hidden/>
                                         <button type="submit" class="btn btn-dark cusButton">Confirm</button>
                                     </div>
