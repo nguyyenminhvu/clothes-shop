@@ -8,7 +8,7 @@ Card Number: 4032038321005583
 Expiration Date: 12/2026
 CVV: 449
 
-If you need help contact me by email: vunmtse161207@fpt.edu.vn.
+If you need help contact me by email: nguyyenminhvu@gmail.com.
 
 Have a good time, 
 THANK YOU.
