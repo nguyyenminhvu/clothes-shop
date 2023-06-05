@@ -65,7 +65,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-2">
                         <div style="display: flex;justify-content: center" class="header__logo">
-                            <a href="./index.html"><img src="img/img/logo.png" alt=""></a>
+                            <a href="LoadPage"><img src="img/img/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-7">
@@ -151,7 +151,7 @@
                                 <h1>Women fashion</h1>
                                 <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
                                     edolore magna aliquapendisse ultrices gravida.</p>
-                                <a href="#">Shop now</a>
+                                <a href="MainController?action=LoadShop&idCate=2">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                                     <div class="categories__text">
                                         <h4>Men fashion</h4>
                                         <p>358 items</p>
-                                        <a href="#">Shop now</a>
+                                        <a href="MainController?action=LoadShop&idCate=1">Shop now</a>
                                     </div>
                                 </div>
                             </div>
@@ -171,7 +171,7 @@
                                     <div class="categories__text">
                                         <h4>Kid fashion</h4>
                                         <p>273 items</p>
-                                        <a href="#">Shop now</a>
+                                        <a href="MainController?action=LoadShop&idCate=3">Shop now</a>
                                     </div>
                                 </div>
                             </div>
@@ -180,16 +180,16 @@
                                     <div class="categories__text">
                                         <h4>Unisex</h4>
                                         <p>159 items</p>
-                                        <a href="#">Shop now</a>
+                                        <a href="MainController?action=LoadShop&idCate=4">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                                 <div class="categories__item set-bg" data-setbg="img/img/categories/category-5.jpg">
                                     <div class="categories__text">
-                                        <h4>Accessories</h4>
+                                        <h4>Sport Fashion</h4>
                                         <p>792 items</p>
-                                        <a href="#">Shop now</a>
+                                        <a href="MainController?action=LoadShop&idCate=5">Shop now</a>
                                     </div>
                                 </div>
                             </div>

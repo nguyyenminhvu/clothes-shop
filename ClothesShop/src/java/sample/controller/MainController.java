@@ -76,6 +76,8 @@ public class MainController extends HttpServlet {
     private static final String UPDATE_INFORMATION_USER_PASSWORD_PAGE = "UpdateUserPasswordController";
     private static final String UPDATE_INFORMATION_EMPLOYEE = "UpdateEmployeeInformation";
     private static final String UPDATE_INFORMATION_EMPLOYEE_PAGE = "UpdateEmployeeInformationController";
+    private static final String AUTHENTICATION_GOOGLE = "AuthenGoogle";
+    private static final String AUTHENTICATION_GOOGLE_PAGE = "AuthenLoginGoogleController";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -149,6 +151,8 @@ public class MainController extends HttpServlet {
                 url = UPDATE_INFORMATION_USER_PASSWORD_PAGE;
             } else if (UPDATE_INFORMATION_EMPLOYEE.equals(action)) {
                 url = UPDATE_INFORMATION_EMPLOYEE_PAGE;
+            } else if (AUTHENTICATION_GOOGLE.equals(action)) {
+                url = AUTHENTICATION_GOOGLE_PAGE;
             } else {
                 request.setAttribute("ERROR", "Your action not support !");
             }

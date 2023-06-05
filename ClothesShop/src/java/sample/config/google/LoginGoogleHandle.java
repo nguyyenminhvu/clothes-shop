@@ -27,7 +27,7 @@ import sample.model.google.UserGoogleDTO;
 public class LoginGoogleHandle extends HttpServlet {
 
     private static final String ERROR = "error.jsp";
-    private static final String SUCCESS = "AuthenLoginGoogle";
+    private static final String SUCCESS = "AuthenLoginGoogleController";
 
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
