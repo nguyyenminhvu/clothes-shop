@@ -30,6 +30,7 @@ public class PaymentService {
     private static final String CLIENT_ID = "ASMZzrjokluzYyGqL89LEABYqOfuhhp4sjR7zkvs0_SxjFjZdplad8ArOAxnkwhi5ucW2tgfWvUbpBkQ";
     private static final String CLIENT_SECRET = "ELjUv9DIZ6qyiZWrGJczQH-umvvscjhDR5rkDyLXabJt234P2FPoqYH3kePrdFuhzul5FrsIqjdMFmjF";
     private static final String MODE = "sandbox";
+    private static final String PORT="8080";
 
     public String authorizePayment(List<OrderPayment> orderPayments) throws PayPalRESTException {
         Payer payer = getPayerInformation();
@@ -121,8 +122,8 @@ public class PaymentService {
 
     private RedirectUrls getRedirectURLs() {
         RedirectUrls redirectUrls = new RedirectUrls();
-        redirectUrls.setCancelUrl("http://localhost:8084/ClothesShop/LoadDetailCartController");
-        redirectUrls.setReturnUrl("http://localhost:8084/ClothesShop/PaymentReview");
+        redirectUrls.setCancelUrl("http://localhost:"+PORT+"/ClothesShop/LoadDetailCartController");
+        redirectUrls.setReturnUrl("http://localhost:"+PORT+"/ClothesShop/PaymentReview");
         return redirectUrls;
     }
 }

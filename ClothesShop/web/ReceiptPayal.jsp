@@ -20,7 +20,9 @@
     </head>
 
     <body>
-
+        <c:if test="${requestScope.transaction eq null || requestScope.payer eq null  }">
+            <c:redirect url="LoadPage"></c:redirect>
+        </c:if>
         <div style="height: 100px;">
 
         </div>

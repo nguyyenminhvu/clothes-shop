@@ -32,9 +32,9 @@
     </head>
 
     <body>
-        <%--  <c:if test="${sessionScope.ACC eq null || sessionScope.ACC.role ne 'USER'}" >
-<c:redirect url="Login.html"></c:redirect> 
-        </c:if>--%>
+        <c:if test="${sessionScope.ACC eq null || sessionScope.ACC.role ne 'USER'}" >
+            <c:redirect url="Login.html"></c:redirect> 
+        </c:if>
         <!-- Page Preloder -->
         <div id="preloder">
             <div class="loader"></div>
@@ -87,7 +87,7 @@
                                 <li><a href="MainController?action=LoadShop&idCate=1">Men</a></li>
                                 <li><a href="MainController?action=LoadShop">Shop</a></li>
                                 <li><a href="MainController?action=LoadShop&idCate=4">Unisex</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="https://github.com/nguyyenminhvu">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -103,7 +103,7 @@
                                                 <menu>
                                                     <br>
                                                     <menuitem><a style="text-decoration: none;" href="LoadInformationUserController?username=${sessionScope.ACC.username}&uriBack=LoadPage"id="mainDrop1"><i style="padding-right:  8px;" class="fa-solid fa-user"></i>${sessionScope.ACC.name}</a></menuitem>
-                                                        <menuitem><a style="text-decoration: none;" href="LoadInformationUserController?username=${sessionScope.ACC.username}&uriBack=LoadPage&key=UpdatePassword" id="mainDrop1"><i style="padding-right:  8px;" class="fa-solid fa-key"></i>Change Password</a></menuitem>
+                                                    <menuitem><a style="text-decoration: none;" href="LoadInformationUserController?username=${sessionScope.ACC.username}&uriBack=LoadPage&key=UpdatePassword" id="mainDrop1"><i style="padding-right:  8px;" class="fa-solid fa-key"></i>Change Password</a></menuitem>
                                                     <menuitem><a style="text-decoration: none;" href="MainController?action=Logout" id="mainDrop1"><i style="padding-right:  8px;" class="fa-solid fa-right-to-bracket"></i>Log Out</a></menuitem>
                                                 </menu>
                                                 </menuitem>
