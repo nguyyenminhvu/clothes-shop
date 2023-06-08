@@ -32,9 +32,9 @@
     </head>
 
     <body>
-        <%--  <c:if test="${sessionScope.ACC eq null || sessionScope.ACC.role ne 'USER'}" >
-<c:redirect url="Login.html"></c:redirect> 
-        </c:if>--%>
+        <c:if test="${sessionScope.ACC eq null || sessionScope.ACC.role ne 'USER'}" >
+            <c:redirect url="Login.html"></c:redirect> 
+        </c:if>
         <!-- Page Preloder -->
         <div id="preloder">
             <div class="loader"></div>

@@ -85,7 +85,7 @@
                                 <li><a href="MainController?action=LoadShop&idCate=1">Men</a></li>
                                 <li><a href="MainController?action=LoadShop">Shop</a></li>
                                 <li><a href="MainController?action=LoadShop&idCate=4">Unisex</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="https://github.com/nguyyenminhvu">Contact</a></li>
                             </ul>
                         </nav>
                     </div>

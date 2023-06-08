@@ -69,7 +69,7 @@
                 <div class="row">
                     <div class="col-xl-3 col-lg-2">
                         <div style="display: flex;justify-content: center" class="header__logo">
-                            <a href="./index.html"><img src="img/img/logo.png" alt=""></a>
+                            <a href="LoadPage"><img src="img/img/logo.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-7">
@@ -80,7 +80,7 @@
                                 <li class="${requestScope.idCate==1?"active":""}"><a href="MainController?action=LoadShop&idCate=1">Men</a></li>
                                 <li class="${requestScope.idCate==-1?"active":""}"><a href="MainController?action=LoadShop">Shop</a></li>
                                 <li class="${requestScope.idCate==4?"active":""}"><a href="MainController?action=LoadShop&idCate=4">Unisex</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                <li><a href="https://github.com/nguyyenminhvu">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
